@@ -1,0 +1,9 @@
+<div>
+    <div class="card" style="width: 25rem;" *ngFor='let person of people'>
+        <img [src]="this.imgUrl+person.profile_path" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{person.name}}</h5>
+            <a [routerLink]="['/people', person.id ]" class="btn btn-primary">Ver detalles</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div *ngIf="movie">
+    <img [src]="this.imgUrl+movie.backdrop_path">
+    <h5>{{movie.title}}</h5>
+    <p>Puntuación: {{movie.vote_average}}</p>
+    <p>Idioma original: {{movie.original_language}}</p>
+    <p>{{movie.overview}}</p>
+</div>

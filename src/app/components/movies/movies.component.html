@@ -3,16 +3,8 @@
         <img [src]="this.imgUrl+movie.backdrop_path" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{movie.title}}</h5>
-            <p class="card-text">{{movie.overview}}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">Puntuación: {{movie.vote_average}}</p>
+            <a [routerLink]="['/movies', movie.id ]" class="btn btn-primary">Ver detalles</a>
         </div>
     </div>
-    <!-- <div class="card" style="width: 25rem;">
-        <img [src]="" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{moviess?.id}}</h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div> -->
 </div>

@@ -9,17 +9,16 @@ import { TmdbApiService } from '../../services/tmdb-api.service';
 export class MoviesComponent implements OnInit {
 
   public movies = [];
-  public moviess = [];
   public imgUrl = "https://image.tmdb.org/t/p/w500";
 
   constructor(private _tmdbApiService : TmdbApiService) { }
 
   ngOnInit() {
+
+    /* Assigns the data from the getPopularMovies method to the movies attribute. */
     this._tmdbApiService.getPopularMovies().then(data => this.movies = data.results);
-    this._tmdbApiService.getCredits(820).then(datas => this.moviess = datas.results);
     setTimeout(() => {
       console.log("this.movies", this.movies);
-      console.log("moviess", this.moviess);
     }, 1000);
   }
 
