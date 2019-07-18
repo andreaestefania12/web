@@ -1,0 +1,153 @@
+h1,
+h2,
+h3,
+h4,
+h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #333;
+}
+
+.card-title {
+    font-family: "Raleway";
+    color: #333;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.card-text {
+    font-family: "Raleway";
+    color: #333;
+    font-size: 20px;
+}
+
+#descripcion {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    text-align: justify;
+    height: 202px;
+}
+
+.textdivider h1 {
+    padding-top: 70px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.textdivider p {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+/* ==========================================================================
+     Wrap Sections
+     ========================================================================== */
+
+#headerwrap {
+    background: url(../imagenes/83804.jpg);
+    margin-top: -50px;
+    padding-top: 120px;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 650px;
+    width: 100%;
+}
+
+#headerwrap h1 {
+    color: #ffffff;
+    margin-top: 90px;
+    padding-bottom: 30px;
+    letter-spacing: 8px;
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000;
+}
+
+#headerwrap p {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 3px;
+    margin-left: 15px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#greywrap {
+    background: #f5f5f5;
+    margin: 0px 10em;
+    padding-top: 40px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+#greywrap .callout {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#greywrap img:hover {
+    -moz-transform: translateY(-20px);
+    transform: translateY(-10px);
+    transition-delay: 0.1s;
+}
+
+.white h1 {
+    padding-top: 35px;
+}
+
+.white p {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.divider {
+    background-image: url(../imagenes/83804.jpg);
+}
+
+#actor {
+    border-style: groove;
+    max-width: 350px;
+}
+
+.btn {
+    margin-bottom: 15px;
+    background-color: #CB80D1;
+    border-color: #C56DCB;
+}
+
+.card-img-top {
+    margin-top: 15px;
+}
+
+#next {
+    margin-top: 20em;
+    margin-left: 10em;
+    width: 10%;
+    height: 50px;
+    background-color: #CB80D1;
+    border-color: #C56DCB;
+    color: white;
+}
+
+.card-body {
+    width: 100%;
+}
+
+.card-img-top {
+    height: 235px;
+    width: 235px;
+}
+
+#listadoActores {
+    margin: 0em 0em 0em 1em;
+}

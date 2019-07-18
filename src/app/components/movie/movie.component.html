@@ -1,7 +1,77 @@
-<div *ngIf="movie">
-    <img [src]="this.imgUrl+movie.backdrop_path">
-    <h5>{{movie.title}}</h5>
-    <p>Puntuación: {{movie.vote_average}}</p>
-    <p>Idioma original: {{movie.original_language}}</p>
-    <p>{{movie.overview}}</p>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- ==== HEADER ==== -->
+<div id="home"></div>
+<div id="headerwrap" name="home">
+    <header class="clearfix">
+        <h1><span class="icon icon-shield"></span></h1>
+        <p>Movies</p>
+        <p>Everything that you have been looking for</p>
+    </header>
 </div>
+<!-- /header -->
+
+<body data-spy="scroll" data-offset="58" data-target="#navbar-main">
+
+    <!-- ==== GREYWRAP ==== -->
+    <div id="greywrap">
+        <div class="row">
+            <div class="col-lg-4 callout">
+                <h2>Películas</h2>
+                <p>Aquí encontraras el listado de las películas más populares hasta el momento </p>
+            </div>
+
+
+            <div class="col-lg-4 callout">
+                <h2>Actores</h2>
+                <p>Los Actores y Actrices que se encuentran en la mira de todo el mundo </p>
+            </div>
+
+
+            <div class="col-lg-4 callout">
+                <h2>Acerca de nosotros</h2>
+                <p>NOSOTROS </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="greywrap">
+        <div class="row" id="listadoPeli">
+            <div class="callout" id="peli" *ngIf="movie">
+                <div>
+
+                    <img class="card-img-top" [src]="this.imgUrl+movie.backdrop_path">
+                </div>
+                <div>
+                    <h5 id="titulo">{{movie.title}}</h5>
+                    <p>Puntuación: {{movie.vote_average}}</p>
+                    <p>Idioma original: {{movie.original_language}}</p>
+
+                </div>
+                <div id="definicion">
+                    <p>{{movie.overview}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<footer class="section-divider textdivider divider">
+    <div class="container">
+        <h1>Página creada por</h1>
+        <hr>
+        <p>Antonio Yu</p>
+        <p>Andrea Timarán</p>
+        <hr>
+    </div>
+</footer>
+
+</html>
