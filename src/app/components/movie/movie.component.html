@@ -2,44 +2,7 @@
 
 <html lang="en">
 
-<!-- ==== HEADER ==== -->
-<div id="home"></div>
-<div id="headerwrap" name="home">
-    <header class="clearfix">
-        <h1><span class="icon icon-shield"></span></h1>
-        <p>Movies</p>
-        <p>Everything that you have been looking for</p>
-    </header>
-</div>
-<!-- /header -->
-
 <body data-spy="scroll" data-offset="58" data-target="#navbar-main">
-
-    <!-- ==== GREYWRAP ==== -->
-    <div id="greywrap">
-        <div class="row">
-            <div class="col-lg-4 callout">
-                <h2>Películas</h2>
-                <p>Aquí encontraras el listado de las películas más populares hasta el momento </p>
-            </div>
-
-
-            <div class="col-lg-4 callout">
-                <h2>Actores</h2>
-                <p>Los Actores y Actrices que se encuentran en la mira de todo el mundo </p>
-            </div>
-
-
-            <div class="col-lg-4 callout">
-                <h2>Acerca de nosotros</h2>
-                <p>NOSOTROS </p>
-            </div>
-
-        </div>
-
-    </div>
-
-
     <div id="greywrap">
         <div class="row" id="listadoPeli">
             <div class="callout" id="peli" *ngIf="movie">
@@ -61,17 +24,27 @@
         </div>
     </div>
 
+    <h1>Elenco</h1>
+    <div class="list" *ngFor="let person of cast; let i = index">
+        <div *ngIf="i < 5">
+            <a [routerLink]="['/people', person.id]" target="_blank">
+                <img [src]="this.imgUrl+person.profile_path">
+            </a>
+            <p>{{person.name}}</p>
+        </div>
+    </div>
+
+    <h1>Películas similares</h1>
+    <div class="list" *ngFor="let sim of similar; let i = index">
+        <div *ngIf="i < 5">
+            <a [routerLink]="['/movies', sim.id]" target="_blank">
+                <img [src]="this.imgUrl+sim.backdrop_path">
+            </a>
+            <p>{{sim.title}}</p>
+        </div>
+    </div>
 
 
 </body>
-<footer class="section-divider textdivider divider">
-    <div class="container">
-        <h1>Página creada por</h1>
-        <hr>
-        <p>Antonio Yu</p>
-        <p>Andrea Timarán</p>
-        <hr>
-    </div>
-</footer>
 
 </html>

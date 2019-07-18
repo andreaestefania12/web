@@ -134,11 +134,12 @@ h6 {
     background-image: url(../imagenes/83804.jpg);
 }
 
+#listadoPeli {
+    margin: 0em 0em 0em 0em;
+}
+
 #peli {
-    display: flex;
-    flex-direction: row;
-    margin: 0em 0em 0em 5em;
-    align-items: center;
+    border-style: groove;
 }
 
 .btn {
@@ -148,23 +149,15 @@ h6 {
 }
 
 .card-img-top {
-    height: 300px;
-    width: 300px;
-    margin-right: 3em;
-    margin-bottom: 100px;
+    margin-top: 15px;
 }
 
-#titulo {
-    width: 10em;
-    margin-right: 3em;
-}
-
-#definicion {
-    margin-right: 3em;
-    width: 80em;
-    text-align: justify;
-}
-
-.list {
-    display: inline-block;
+#next {
+    margin-top: 20em;
+    margin-left: 10em;
+    width: 10%;
+    height: 50px;
+    background-color: #CB80D1;
+    border-color: #C56DCB;
+    color: white;
 }

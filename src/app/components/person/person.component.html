@@ -2,67 +2,32 @@
 
 <html lang="en">
 
-<!-- ==== HEADER ==== -->
-<div id="home"></div>
-<div id="headerwrap" name="home">
-    <header class="clearfix">
-        <h1><span class="icon icon-shield"></span></h1>
-        <p>Movies</p>
-        <p>Everything that you have been looking for</p>
-    </header>
-</div>
-<!-- /header -->
-
 <body data-spy="scroll" data-offset="58" data-target="#navbar-main">
-
-    <!-- ==== GREYWRAP ==== -->
-    <div id="greywrap">
-        <div class="row">
-            <div class="col-lg-4 callout">
-                <h2>Películas</h2>
-                <p>Aquí encontraras el listado de las películas más populares hasta el momento </p>
-            </div>
-
-
-            <div class="col-lg-4 callout">
-                <h2>Actores</h2>
-                <p>Los Actores y Actrices que se encuentran en la mira de todo el mundo </p>
-            </div>
-
-
-            <div class="col-lg-4 callout">
-                <h2>Acerca de nosotros</h2>
-                <p>NOSOTROS </p>
-            </div>
-
-        </div>
-
-    </div>
-
-
     <div id="greywrap">
         <div class="row" id="listadoActores">
-            <div class="col-lg-4 callout" id="actor" *ngFor='let person of people'>
-                <img [src]="this.imgUrl+person.profile_path" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{person.name}}</h5>
-                    <a [routerLink]="['/people', person.id ]" class="btn btn-primary">Ver detalles</a>
+            <div class="callout" id="peli" *ngIf="person">
+                <div>
+
+                    <img class="card-img-top" [src]="this.imgUrl+person.profile_path">
+                </div>
+                <div>
+                    <h5 id="nombre">{{person.name}}</h5>
+                    <p>Fecha de nacimiento: {{person.birthday}}</p>
+                    <p>Biografía: {{person.biography}}</p>
+
                 </div>
             </div>
         </div>
     </div>
-
-
-
-</body>
-<footer class="section-divider textdivider divider">
-    <div class="container">
-        <h1>Página creada por</h1>
-        <hr>
-        <p>Antonio Yu</p>
-        <p>Andrea Timarán</p>
-        <hr>
+    <h1>Actúa en</h1>
+    <div class="list" *ngFor="let movie of movies; let i = index">
+        <div *ngIf="i < 5 && movie.media_type === 'movie'">
+            <a [routerLink]="['/movies', movie.id]" target="_blank">
+                <img [src]="this.imgUrl+movie.backdrop_path">
+            </a>
+            <p>{{movie.title}}</p>
+        </div>
     </div>
-</footer>
+</body>
 
 </html>
