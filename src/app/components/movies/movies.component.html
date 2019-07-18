@@ -1,51 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- ==== HEADER ==== -->
-<div id="home"></div>
-<div id="headerwrap" name="home">
-    <header class="clearfix">
-        <h1><span class="icon icon-shield"></span></h1>
-        <p>Movies</p>
-        <p>Everything that you have been looking for</p>
-    </header>
-</div>
-<!-- /header -->
-
 <body data-spy="scroll" data-offset="58" data-target="#navbar-main">
-
-    <!-- ==== GREYWRAP ==== -->
-    <div id="greywrap">
-        <div class="row">
-            <div class="col-lg-4 callout">
-                <h2>Películas</h2>
-                <p>Aquí encontraras el listado de las películas más populares hasta el momento </p>
-            </div>
-
-
-            <div class="col-lg-4 callout">
-                <h2>Actores</h2>
-                <p>Los Actores y Actrices que se encuentran en la mira de todo el mundo </p>
-            </div>
-
-
-            <div class="col-lg-4 callout">
-                <h2>Acerca de nosotros</h2>
-                <p>NOSOTROS </p>
-            </div>
-
-        </div>
-
-    </div>
-
-
     <div id="greywrap">
         <div class="row" id="listadoPeli">
             <div class="col-lg-4 callout" id="peli" *ngFor='let movie of movies'>
                 <img [src]="this.imgUrl+movie.backdrop_path " class="card-img-top" alt="... ">
                 <h5 class="card-title">{{movie.title}}</h5>
                 <p class="card-text">Puntuación: {{movie.vote_average}}</p>
-                <p id="descripcion">{{movie.overview}}</p>
                 <a [routerLink]="[ '/movies', movie.id ] " class="btn btn-primary ">Ver detalles</a>
 
             </div>
@@ -54,14 +16,5 @@
     </div>
 
 </body>
-<footer class="section-divider textdivider divider">
-    <div class="container">
-        <h1>Página creada por</h1>
-        <hr>
-        <p>Antonio Yu</p>
-        <p>Andrea Timarán</p>
-        <hr>
-    </div>
-</footer>
 
 </html>

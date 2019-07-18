@@ -14,6 +14,8 @@ import { PersonComponent } from './components/person/person.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ErrorComponent } from './components/error/error.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { FootingComponent } from './components/footing/footing.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ErrorComponent } from './components/error/error.component';
     PersonComponent,
     HomeComponent,
     AboutComponent,
-    ErrorComponent
+    ErrorComponent,
+    NavigationComponent,
+    FootingComponent
   ],
   imports: [
     BrowserModule,

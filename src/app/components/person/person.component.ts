@@ -36,6 +36,7 @@ export class PersonComponent implements OnInit {
     this.getPersonMovies(this.personId);
     setTimeout(() => {
       console.log(this.person);
+      console.log(this.movies);
     }, 1000);
   }
 
