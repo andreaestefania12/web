@@ -19,14 +19,8 @@ h6 {
     font-family: "Raleway";
     color: #333;
     font-size: 20px;
-}
-
-#descripcion {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 100%;
+    min-width: 16em;
     text-align: justify;
-    height: 202px;
 }
 
 .textdivider h1 {
@@ -48,46 +42,6 @@ h6 {
      Wrap Sections
      ========================================================================== */
 
-#headerwrap {
-    background: url(../imagenes/83804.jpg);
-    margin-top: -50px;
-    padding-top: 120px;
-    text-align: center;
-    background-attachment: relative;
-    background-position: center center;
-    min-height: 650px;
-    width: 100%;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-#headerwrap h1 {
-    color: #ffffff;
-    margin-top: 90px;
-    padding-bottom: 30px;
-    letter-spacing: 8px;
-    font-size: 100px;
-    font-weight: bold;
-    text-shadow: 2px 2px 2px #000;
-}
-
-#headerwrap p {
-    color: #ffffff;
-    font-size: 40px;
-    font-weight: 400;
-    text-align: center;
-    line-height: 40px;
-    letter-spacing: 3px;
-    margin-left: 15px;
-    text-shadow: 1px 1px 1px #000;
-}
-
 #greywrap {
     background: #f5f5f5;
     margin: 0px 10em;
@@ -102,12 +56,6 @@ h6 {
     margin-bottom: 20px;
     text-align: center;
     width: 70%;
-}
-
-#greywrap img:hover {
-    -moz-transform: translateY(-20px);
-    transform: translateY(-10px);
-    transition-delay: 0.1s;
 }
 
 #greywrap p {
@@ -159,12 +107,52 @@ h6 {
     margin-right: 3em;
 }
 
-#definicion {
-    margin-right: 3em;
-    width: 80em;
-    text-align: justify;
-}
-
 .list {
     display: inline-block;
+}
+
+#greywrapTitle {
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    width: 80%;
+    margin: 0px 10em;
+}
+
+#greywrapActores {
+    background: #f5f5f5;
+    padding-top: 40px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0px 10em;
+}
+
+.card {
+    background-color: #fff;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.card-img {
+    width: 138px;
+    height: 175px;
+    margin: 10px 10px;
+}
+
+#listadoActores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#peliculas {
+    height: 141px;
+    width: 260px;
+    margin-right: 3em;
+}
+
+#pelis {
+    text-align: center;
 }

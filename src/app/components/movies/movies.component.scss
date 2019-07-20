@@ -24,9 +24,9 @@ h6 {
 #descripcion {
     text-overflow: ellipsis;
     overflow: hidden;
-    width: 100%;
     text-align: justify;
     height: 202px;
+    max-width: 75ch;
 }
 
 .textdivider h1 {

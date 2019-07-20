@@ -16,34 +16,46 @@
                     <p>Idioma original: {{movie.original_language}}</p>
 
                 </div>
-                <div id="definicion">
-                    <p>{{movie.overview}}</p>
+                <div>
+                    <p class="card-text">{{movie.overview}}</p>
                 </div>
 
             </div>
         </div>
     </div>
-
-    <h1>Elenco</h1>
-    <div class="list" *ngFor="let person of cast; let i = index">
-        <div *ngIf="i < 5">
-            <a [routerLink]="['/people', person.id]" target="_blank">
-                <img [src]="this.imgUrl+person.profile_path">
-            </a>
-            <p>{{person.name}}</p>
-        </div>
+    <div id="greywrapTitle">
+        <h1 class="text-center">Elenco</h1>
     </div>
 
-    <h1>Películas similares</h1>
-    <div class="list" *ngFor="let sim of similar; let i = index">
-        <div *ngIf="i < 5">
-            <a [routerLink]="['/movies', sim.id]" target="_blank">
-                <img [src]="this.imgUrl+sim.backdrop_path">
-            </a>
-            <p>{{sim.title}}</p>
+    <div id="greywrapActores">
+        <div class="row" id="listadoActores">
+            <div *ngFor="let person of cast; let i = index">
+                <div class="card" *ngIf="i < 5">
+                    <a [routerLink]="['/people', person.id]" target="_blank">
+                        <img [src]="this.imgUrl+person.profile_path" class="card-img">
+                    </a>
+                    <p>{{person.name}}</p>
+                </div>
+            </div>
         </div>
+
     </div>
 
+    <div id="greywrapTitle">
+        <h1 class="text-center">Películas similares</h1>
+    </div>
+    <div id="greywrapActores">
+        <div class="row" id="listadoActores">
+            <div *ngFor="let sim of similar; let i = index">
+                <div id="pelis" *ngIf="i < 5">
+                    <a [routerLink]="['/movies', sim.id]" target="_blank">
+                        <img class="card-img" id="peliculas" [src]="this.imgUrl+sim.backdrop_path">
+                    </a>
+                    <p>{{sim.title}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 

@@ -23,19 +23,26 @@
     <div id="greywrap">
         <div class="row">
             <div class="col-lg-4 callout">
-                <h2>Películas</h2>
+                <a [routerLink]="['/movies']" target="_blank">
+                    <h2>Películas</h2>
+                </a>
+
                 <p>Aquí encontraras el listado de las películas más populares hasta el momento </p>
             </div>
 
 
             <div class="col-lg-4 callout">
-                <h2>Actores</h2>
+                <a [routerLink]="['/people']" target="_blank">
+                    <h2>Actores</h2>
+                </a>
                 <p>Los actores y actrices que se encuentran en la mira de todo el mundo </p>
             </div>
 
 
             <div class="col-lg-4 callout">
-                <h2>Acerca de nosotros</h2>
+                <a [routerLink]="['/about']" target="_blank">
+                    <h2>Acerca de nosotros</h2>
+                </a>
             </div>
 
         </div>

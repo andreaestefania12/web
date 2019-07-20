@@ -6,8 +6,7 @@
     <div id="greywrap">
         <div class="row" id="listadoActores">
             <div class="callout" id="peli" *ngIf="person">
-                <div>
-
+                <div id="card">
                     <img class="card-img-top" [src]="this.imgUrl+person.profile_path">
                 </div>
                 <div>
@@ -19,15 +18,20 @@
             </div>
         </div>
     </div>
-    <h1>Actúa en</h1>
-    <div class="list" *ngFor="let movie of movies; let i = index">
-        <div *ngIf="i < 5 && movie.media_type === 'movie'">
-            <a [routerLink]="['/movies', movie.id]" target="_blank">
-                <img [src]="this.imgUrl+movie.backdrop_path">
-            </a>
-            <p>{{movie.title}}</p>
+    <div id="greywrapTitle">
+        <h1 class="text-center">Actúa en</h1>
+    </div>
+    <div id="greywrap">
+        <div class="list" *ngFor="let movie of movies; let i = index">
+            <div id="pelis" *ngIf="i < 5 && movie.media_type === 'movie'">
+                <a [routerLink]="['/movies', movie.id]" target="_blank">
+                    <img id="image" [src]="this.imgUrl+movie.backdrop_path">
+                </a>
+                <p>{{movie.title}}</p>
+            </div>
         </div>
     </div>
+
 </body>
 
 </html>
