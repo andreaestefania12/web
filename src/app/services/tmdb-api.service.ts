@@ -17,7 +17,6 @@ export class TmdbApiService {
     // Returns a request using a search string as a promise.
     // Using template string, which is backtick ``
     let url = `${this.baseUrl}${search}?api_key=${this.apiKey}&language=${this.language}`;
-    console.log("url", url);
 
     /* FIXME: Fix the return of promise in order to avoid getting error in console.
     *

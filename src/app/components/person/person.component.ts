@@ -34,10 +34,6 @@ export class PersonComponent implements OnInit {
 
     /* Calls the getPersonMovies method */
     this.getPersonMovies(this.personId);
-    setTimeout(() => {
-      console.log(this.person);
-      console.log(this.movies);
-    }, 1000);
   }
 
   getPersonMovies(id:number) {
@@ -60,6 +56,7 @@ export class PersonComponent implements OnInit {
           flag = false;
           this.movies = actors[i].known_for;
         }
+        i = i + 1;
       }
     }, 1000);
   }

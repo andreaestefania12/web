@@ -17,9 +17,6 @@ export class MoviesComponent implements OnInit {
 
     /* Assigns the data from the getPopularMovies method to the movies attribute. */
     this._tmdbApiService.getPopularMovies().then(data => this.movies = data.results);
-    setTimeout(() => {
-      console.log("this.movies", this.movies);
-    }, 1000);
   }
 
 }

@@ -19,9 +19,6 @@ export class PeopleComponent implements OnInit {
   ngOnInit() {
     /* Assigns the data from the getPopularActors method to the people attribute. */
     this._tmdbApiService.getPopularActors().then(data => this.people = data.results);
-    setTimeout(() => {
-      console.log(this.people);
-    }, 1000);
   }
 
 }

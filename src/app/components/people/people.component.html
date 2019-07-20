@@ -4,7 +4,7 @@
 <body data-spy="scroll" data-offset="58" data-target="#navbar-main">
     <div id="greywrap">
         <div class="row" id="listadoActores">
-            <div class="col-lg-4 callout" id="actor" *ngFor='let person of people'>
+            <div class="col-lg-4 callout" id="actor" *ngFor='let person of people; trackBy: trackByFn'>
                 <img [src]="this.imgUrl+person.profile_path" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{person.name}}</h5>

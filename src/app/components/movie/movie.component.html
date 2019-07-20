@@ -49,7 +49,7 @@
             <div *ngFor="let sim of similar; let i = index">
                 <div id="pelis" *ngIf="i < 5">
                     <a [routerLink]="['/movies', sim.id]" target="_blank">
-                        <img class="card-img" id="peliculas" [src]="this.imgUrl+sim.backdrop_path">
+                        <img id="peliculas" [src]="this.imgUrl+sim.backdrop_path">
                     </a>
                     <p>{{sim.title}}</p>
                 </div>

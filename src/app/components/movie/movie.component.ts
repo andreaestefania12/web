@@ -45,11 +45,6 @@ export class MovieComponent implements OnInit {
        this._tmdbApiService.getSimilar(this.movieId)
        .then(data => this.similar = data.results)
        .catch(error => console.log("An error has ocurred."));
-    
-    setTimeout(() => {
-      console.log(this.cast);
-      console.log(this.similar);
-    }, 1000);
   }
 
 }

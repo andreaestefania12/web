@@ -21,13 +21,15 @@
     <div id="greywrapTitle">
         <h1 class="text-center">Actúa en</h1>
     </div>
-    <div id="greywrap">
-        <div class="list" *ngFor="let movie of movies; let i = index">
-            <div id="pelis" *ngIf="i < 5 && movie.media_type === 'movie'">
-                <a [routerLink]="['/movies', movie.id]" target="_blank">
-                    <img id="image" [src]="this.imgUrl+movie.backdrop_path">
-                </a>
-                <p>{{movie.title}}</p>
+    <div id="greywrapActores">
+        <div class="row" id="listadoActores">
+            <div *ngFor="let movie of movies; let i = index">
+                <div id="pelis" *ngIf="i < 5 && movie.media_type === 'movie'">
+                    <a [routerLink]="['/movies', movie.id]" target="_blank">
+                        <img id="peliculas" [src]="this.imgUrl+movie.backdrop_path">
+                    </a>
+                    <p>{{movie.title}}</p>
+                </div>
             </div>
         </div>
     </div>
