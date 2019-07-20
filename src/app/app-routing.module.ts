@@ -10,7 +10,6 @@ import { ErrorComponent } from './components/error/error.component';
 
 const routes: Routes = [
   {path: "movies", component: MoviesComponent},
-  {path: "movies",component: MoviesComponent},
   {path: "movies/:id", component: MovieComponent},
   {path: "about", component: AboutComponent},
   {path: "people", component: PeopleComponent},
